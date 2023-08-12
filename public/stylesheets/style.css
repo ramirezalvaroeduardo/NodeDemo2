@@ -44,15 +44,15 @@ h3 {
 }
 
 ol {
-  margin: 5px 0px 5px 45px;
+  margin: 5px 0px 5px 35px;
   padding-left: 10px;
-  font-size: 2vw;
+  font-size: 2.75vw;
 }
 
 ul {
-  margin: 5px 0px 5px 45px;
-  padding-left: 30px;
-  font-size: 2vw;
+  margin: 5px 0px 5px 0px;
+  padding-left: 0px;
+  font-size: 2.75vw;
   list-style-type: none;
 }
 
