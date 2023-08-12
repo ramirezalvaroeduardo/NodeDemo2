@@ -10,6 +10,7 @@ h1, p {
   
   float: none;
 	display: inline-block;
+	font-family:  "Garamond", serif;
 	font-weight: bold;
 	font-size: 7vw;
 	/*
@@ -40,7 +41,7 @@ h1, p {
 h3 {
   margin: 5px 0px 5px 15px;
   padding: 0;
-  font-size: 3.5vw;
+	font-size: 3.5vw;
 }
 
 ol {
@@ -69,7 +70,7 @@ a {
 }
 
 
-
+/*
 #body {
 #  padding-left: 30px;
 #  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -193,3 +194,4 @@ h4 {
 	padding-left: 40px;
 }
 
+*/
