@@ -45,8 +45,15 @@ h3 {
 
 ol {
   margin: 5px 0px 5px 45px;
-  padding: 0;
+  padding-left: 30px;
   font-size: 3vw;
+}
+
+ul {
+  margin: 5px 0px 5px 45px;
+  padding-left: 30px;
+  font-size: 3vw;
+  list-style-type: none;
 }
 
 a {
