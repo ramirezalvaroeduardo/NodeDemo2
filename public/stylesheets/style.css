@@ -5,7 +5,7 @@ body {
 }
 
 header_div {
-	width: 96%;
+	width: 98%;
 	margin-bottom: 30px;
 	margin-left: 0px;
 	padding: 4px 16px 4px 16px;
@@ -25,12 +25,12 @@ h1, p {
 	background-color: #e0ddc8;
 	*/
 
-/*
+/**/
 	margin-bottom: 30px;
 	margin-left: 0px;
 	padding: 4px 16px 4px 16px;
-	width: 96%;
-	*/
+/**/
+	width: 98%;
 	/*height:30px;*/
 	background: -webkit-linear-gradient(top, #8ea2c2, #082c62);
 	background: -o-linear-gradient(top, #8ea2c2, #082c62);
