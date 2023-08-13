@@ -2,29 +2,25 @@ extends layout
 
 block content
   div.header_div
+    a.menu_style(class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample") H
 
-  a(class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample") Hamburguesa
-  button(class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample")
+    div(class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel")
+      div(class="offcanvas-header")
+        h5(class="offcanvas-title" id="offcanvasExampleLabel") Menu
+        button(type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close")
+      div(class="offcanvas-body")
+        div(class="dropdown mt-2")
+          ul(aria-labelledby="dropdownMenuButton")
+            li
+              h6 Provider Tutorials
+            li
+              h6 Office Manager Tutorials
+            li
+              h6 Office Staff Tutorials
+            li
+              h6 FAQs
 
-  div(class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel")
-    div(class="offcanvas-header")
-      h5(class="offcanvas-title" id="offcanvasExampleLabel") Menu de la Hamburguesa
-      button(type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close")
-    div(class="offcanvas-body")
-      div Ejemplo del menu de la hamburguesa.
-      div(class="dropdown mt-3")
-        button(class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown") Dropdown button
-        ul(class="dropdown-menu" aria-labelledby="dropdownMenuButton")
-          li
-            a(class="dropdown-item" href="#") Provider Tutorials
-          li
-            a(class="dropdown-item" href="#") Office Manager Tutorials
-          li
-            a(class="dropdown-item" href="#") Office Staff Tutorials
-          li
-            a(class="dropdown-item" href="#") FAQs
-
-  h1= title
+    h1= title
 
   h3 Common Questions and Answers
 
