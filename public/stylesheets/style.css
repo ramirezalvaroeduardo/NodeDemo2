@@ -1,16 +1,12 @@
 body {
-  padding: 10px 10px 10px 5px;
+  padding: 10px 0px 10px 0px;
   font: 14ew "Lucida Grande", Helvetica, Arial, sans-serif;
   margin-left:20px;
 }
 
 .header_div {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 30px;
-	margin-left: 0px;
-	padding: 4px 16px 4px 16px;
-
+  margin-bottom: 0 0 10px 0;
+	padding: 5px 0 5px 0;
 	width: 98%;
 }
 
@@ -35,6 +31,13 @@ body {
 	text-align: center;
 	vertical-align: middle;
 	color: #fff;
+}
+
+.ddoption {
+  margin: 0px 0px 0px 55px;
+  padding: 0;
+  font-size: 2.5vw;
+  list-style-type: circle;
 }
 
 h1, p {
@@ -77,7 +80,7 @@ h4 {
 h6 {
   margin: 5px 0px 5px 25px;
   padding: 0;
-  font-size: 1.5vw;
+  font-size: 2.5vw;
 }
 
 ol {
