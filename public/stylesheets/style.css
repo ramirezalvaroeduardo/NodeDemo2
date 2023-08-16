@@ -6,7 +6,7 @@ body {
 
 .header_div {
   margin-bottom: 0 0 10px 0;
-	padding: 5px 0 5px 0;
+	padding: 5px 0 0px 0;
 	width: 98%;
 }
 
@@ -14,19 +14,7 @@ body {
   padding: 0 3px 0 3px;
   margin: 0 5px 0 0;
  	display: inline-block;
-	font-family:  "Garamond", serif;
-	font-weight: bold;
-	font-size: 5.6vw;
-	width: 8%;
-	background: -webkit-linear-gradient(top, #8ea2c2, #082c62);
-	background: -o-linear-gradient(top, #8ea2c2, #082c62);
-	background: -moz-linear-gradient(top, #8ea2c2, #082c62);
-	background: linear-gradient(top, #8ea2c2, #082c62);
-	border: 1px solid #999;
-	border-radius: 8px;
-	outline: none;
-	white-space: nowrap;
-	-webkit-user-select: none;
+	font-size: 2em;
 	cursor: pointer;
 	text-align: center;
 	vertical-align: middle;
@@ -45,6 +33,16 @@ body {
   list-style-type: circle;
 }
 
+.headerImg {
+	border-radius: 8px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.commonStyle {
+  margin-top: 80px;
+}
+
 .sendStyle {
   margin: 0px 0px 0px 55px;
   padding: 0 20px 0 20px;
@@ -60,7 +58,7 @@ body {
 	background: linear-gradient(top, #8ea2c2, #082c62);
 }
 
-h1, p {
+h1 {
   padding: 0 3px 0 3px;
   margin: 0;
 	display: inline-block;
