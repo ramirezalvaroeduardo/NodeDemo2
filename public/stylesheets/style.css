@@ -1,6 +1,6 @@
 body {
   padding: 10px 0px 10px 0px;
-  font: 0.35rem "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 0.4rem "Lucida Grande", Helvetica, Arial, sans-serif;
   margin-left:20px;
 }
 
@@ -29,7 +29,7 @@ body {
 .ddoption {
   margin: 0px 0px 0px 55px;
   padding: 0;
-  font-size: 2.5em;
+  font-size: 1em;
   list-style-type: circle;
 }
 
@@ -127,9 +127,19 @@ hr {
 		background-color:#777;
 }
 
-a {
+.aProp {
   color: #00B7FF;
+  font-size: 4.5em;
+  padding: 3px 2px;
+  margin:0;
 }
+
+.pProp {
+  font-size: 2.5em;
+  padding: 3px 2px;
+  margin: 1em 5em 1em 5em;
+}
+
 
 @media (min-width: 576px) {
 	font-size: 14em;
