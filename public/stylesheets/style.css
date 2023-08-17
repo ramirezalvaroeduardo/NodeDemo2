@@ -1,6 +1,6 @@
 body {
   padding: 10px 0px 10px 0px;
-  font: 14ew "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 0.35rem "Lucida Grande", Helvetica, Arial, sans-serif;
   margin-left:20px;
 }
 
@@ -29,7 +29,7 @@ body {
 .ddoption {
   margin: 0px 0px 0px 55px;
   padding: 0;
-  font-size: 2.5vw;
+  font-size: 2.5em;
   list-style-type: circle;
 }
 
@@ -40,13 +40,14 @@ body {
 }
 
 .commonStyle {
-  margin-top: 160px;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 .sendStyle {
   margin: 0px 0px 0px 55px;
   padding: 0 20px 0 20px;
-  font-size: 2.5vw;
+  font-size: 2.5em;
   font-weight: bold;
 	font-style: oblique;
 	color: white;
@@ -64,7 +65,7 @@ h1 {
 	display: inline-block;
 	font-family:  "Garamond", serif;
 	font-weight: bold;
-	font-size: 7vw;
+	font-size: 7em;
 	width: 90%;
 	background: -webkit-linear-gradient(top, #8ea2c2, #082c62);
 	background: -o-linear-gradient(top, #8ea2c2, #082c62);
@@ -82,17 +83,17 @@ h1 {
 }
 
 h3 {
-  margin: 5px 0px 5px 15px;
+  margin: 20px 0px 10px 15px;
   padding: 0;
   font-family:  "Lucida Grande", Helvetica, Arial, sans-serif;
-	font-size: 3.5vw;
+	font-size: 3.5em;
 	font-weight: 700;
 }
 
 h4, .labelStyle {
   margin: 2px 0px 2px 35px;
   padding: 0;
-  font-size: 2.5vw;
+  font-size: 2.5em;
 }
 
 h5, .questionText {
@@ -108,13 +109,13 @@ h5, .questionText {
 ol {
   margin: 5px 0px 5px 75px;
   padding: 0;
-  font-size: 2.75vw;
+  font-size: 2.75em;
 }
 
 ul {
   margin: 5px 0px 5px 0px;
   padding: 0px;
-  font-size: 2.75vw;
+  font-size: 2.75em;
   list-style-type: none;
 }
 
@@ -129,6 +130,27 @@ hr {
 a {
   color: #00B7FF;
 }
+
+@media (min-width: 576px) {
+	font-size: 14em;
+}
+
+@media (min-width: 768px) {
+	font-size: 16em;
+}
+
+@media (min-width: 992px) {
+	font-size: 17em;	
+}
+
+@media (min-width: 1200px) {
+	font-size: 18em;
+}
+
+@media (min-width: 1200px) {
+	font-size: 17em;	
+}
+
 
 
 /*

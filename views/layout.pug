@@ -9,15 +9,15 @@ html
     block content
 
     div.header_div
-      nav(class="nav nav-pills nav-fill fixed-top" style="padding: 5px 5px 5px 5px; margin:0; background: #333")
+      nav(class="nav nav-pills nav-fill fixed-top" style="padding: 5px 5px 5px 0px; margin:0; background: #333")
         img.headerImg(src="images/mspb_logo.jpeg" alt="MSPB" width="40" height="40")
         a(class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="margin: 0; padding: 2px 0 0 5px;")
           span.menu_style(class="fa-solid fa-bars fa-beat-fade")
-        a(class="nav-link" href="/" style="font-size: 3.5vw")  Home
-        a(class="nav-link" aria-current="page" href="#" style="font-size: 3.5vw") Provider
-        a(class="nav-link" href="#" style="font-size: 3.5vw") Manager
-        a(class="nav-link" href="#" style="font-size: 3.5vw") Staff
-        a(class="nav-link" href="/faqs" style="font-size: 3.5vw") FAQs
+        a(class="nav-link" href="/" style="font-size: 3.5em; padding: 8px 2px; margin:0;")  Home
+        a(class="nav-link" aria-current="page" href="#" style="font-size: 3.5em; padding: 8px 2px; margin:0;") Provider
+        a(class="nav-link" href="#" style="font-size: 3.5em; padding: 8px 2px; margin:0;") Manager
+        a(class="nav-link" href="#" style="font-size: 3.5em; padding: 8px 2px; margin:0;") Staff
+        a(class="nav-link" href="/faqs" style="font-size: 3.5em; padding: 8px 2px; margin:0;") FAQs
 
       div.offCanvasStyle(class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel")
         div(class="offcanvas-header")
@@ -31,10 +31,6 @@ html
               li.ddoption Office Staff Tutorials
               li.ddoption 
                 a(style="text-decoration:none" href="/faqs") FAQs
-
-
-  div.commonStyle(align="center")
-    img(src="images/mspb_logo.jpeg" alt="MSPB" width="120" height="120" align="center")
 
 
     script(src='/javascripts/getQuestionText.js')
