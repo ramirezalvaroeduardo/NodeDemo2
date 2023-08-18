@@ -5,10 +5,11 @@ block content
   div.commonStyle()
     
     div.commonStyle(align="center")
-      img(src="images/mspb_logo.jpeg" alt="MSPB" width="160" height="160" align="center")
+      img.imgStyle(src="images/mspb_logo.jpeg" alt="MSPB" width="160" height="160" align="center")
 
-    h3 Common Questions and Answers
+    hr 
 
+    h3.h3Style Common Questions and Answers
     div(class="accordion" id="accordionExample")
       div(class="accordion-item" style="margin-left: 35px; width: 92%;")
         h2(class="accordion-header" id="headingOne")
@@ -35,7 +36,7 @@ block content
   hr 
 
   div.videoStyle()
-    h3 Tutorials (Videos)
+    h3.h3Style Tutorials (Videos)
     ol
       li()
         div(style=" display: flex; align-items: top;")
@@ -50,7 +51,7 @@ block content
   hr
 
   div.yourQuestionStyle()
-    h3 Write/Email your question
+    h3.h3Style Write/Email your question
     div.questionStyle()
       div
         label.labelStyle(for='dQuestion') Question
