@@ -21,4 +21,5 @@ function sendDMail(dText) {
 	} catch ( dExc ) {
         console.log( 'sendDMail(.) - E [' + dExc.message + ']' );
     }
+    alert("Email Sent.");
 }

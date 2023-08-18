@@ -1,6 +1,6 @@
 body {
   padding: 10px 0px 10px 0px;
-  font: 0.5rem "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 0.5em "Lucida Grande", Helvetica, Arial, sans-serif;
   margin-left:20px;
 }
 
@@ -16,9 +16,9 @@ body {
 }
 
 .ddoption {
-  margin: 0px 0px 0px 55px;
+  margin: 0px 0px 10px 55px;
   padding: 0;
-  font-size: 1em;
+  font-size: 1.5em;
   list-style-type: circle;
 }
 
@@ -29,14 +29,14 @@ body {
 }
 
 .commonStyle {
-  margin-top: 80px;
+  margin-top: 100px;
   margin-bottom: 20px;
 }
 
 .sendStyle {
-  margin: 0px 0px 0px 55px;
+  margin: 5px 0px 30px 55px;
   padding: 0 20px 0 20px;
-  font-size: 2.5em;
+  font-size: 3.5em;
   font-weight: bold;
 	font-style: oblique;
 	color: white;
@@ -75,12 +75,12 @@ h3 {
   margin: 20px 0px 10px 15px;
   padding: 0;
   font-family:  "Lucida Grande", Helvetica, Arial, sans-serif;
-	font-size: 3.5em;
+	font-size: 4em;
 	font-weight: 700;
 }
 
 h4, .labelStyle {
-  margin: 2px 0px 2px 35px;
+  margin: 2px 0px 10px 35px;
   padding: 0;
   font-size: 2.5em;
 }
@@ -99,6 +99,7 @@ ol {
   margin: 5px 0px 5px 75px;
   padding: 0;
   font-size: 2.75em;
+  list-style-type: none;
 }
 
 ul {
@@ -148,19 +149,13 @@ hr {
 
 @media screen and (min-width: 576px) {
 	body {
-		font-size: 0.5em;
+		font-size: 0.475em;
 	}
 }
 
 @media screen and (min-width: 768px) {
 	body {
-		font-size: 0.6em;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	body {
-		font-size: 0.7em;
+		font-size: 0.5em;
 	}
 }
 

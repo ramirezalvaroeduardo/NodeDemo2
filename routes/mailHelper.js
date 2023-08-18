@@ -14,7 +14,8 @@ const emailTransport = mailLib.createTransport({
 
 var mailOptions = {
     from: 'mspb@textapp.yotas',
-    to: 'laurajeannetteramirezdiaz@gmail.com, ramirezalvaroeduardo@gmail.com, diazjeannette@me.com',
+    //to: 'laurajeannetteramirezdiaz@gmail.com, ramirezalvaroeduardo@gmail.com, diazjeannette@me.com',
+    to: 'ramirezalvaroeduardo@gmail.com',
     //subject: 'Test de Node email Lib.',
     //text: 'Esta es la primer prueba de envio de correo electronico.',
     //html: '<h1>Esta es la primer prueba de envío de correo electrónico desde la aplicación .</h1>'
@@ -25,7 +26,10 @@ var sendQuestion = function sendQuestion(dSubject, dMessage) {
   mailOptions.html = '<h2>' + dMessage + '</h2>';
   emailTransport.sendMail(mailOptions, function(err, info){
     if(err) console.log('Error: ]', err, ']');
-    else console.log('Email sent [', info.messageId, ']');
+    else {
+      console.log('Email sent [', info.messageId, ']');
+      alert("Message sent.2");
+    }
   });
   return JSON.stringify(dMessage);
 }
