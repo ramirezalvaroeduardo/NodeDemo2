@@ -7,12 +7,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'MSPB' });
 });
 
-router.get('/provider', function(req, res) {
-  res.render('provider', '');
+router.get('/prdr', function(req, res) {
+  res.render('prdr', '');
 })
 
-router.get('/manager', function(req, res) {
-  res.render('manager', '');
+router.get('/mgr', function(req, res) {
+  res.render('mgr', '');
 })
 
 router.get('/staff', function(req, res) {
