@@ -2,6 +2,7 @@ body {
   padding: 10px 0px 10px 0px;
   font: 0.5em "Lucida Grande", Helvetica, Arial, sans-serif;
   margin-left:20px;
+  background:  #ddd;
 }
 
 .header_div {
@@ -195,6 +196,7 @@ hr {
 .cardStyle {
 	margin-right: 1em;
 	box-shadow: 0.75em 0.75em 0.75em #003257;
+	border-radius: .3em;
 }
 
 .h3Style {
@@ -224,6 +226,8 @@ hr {
 }
 
 /* */
+
+
 .imgStyle {
 	border-radius: 8px;
 }
