@@ -7,8 +7,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'MSPB' });
 });
 
-router.get('/prdr', function(req, res) {
-  res.render('prdr', '');
+router.get('/pvdr', function(req, res) {
+  res.render('pvdr', '');
 })
 
 router.get('/mgr', function(req, res) {
