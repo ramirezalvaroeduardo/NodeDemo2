@@ -16,9 +16,9 @@ html
             span(class="fa-solid fa-bars fa-2xl fa-beat-fade lProp")
         div.aDiv
           a(class="nav-link aProp" href="/")  Home
-          a(class="nav-link aProp" aria-current="page" href="#") Provider
-          a(class="nav-link aProp" href="#") Manager
-          a(class="nav-link aProp" href="#") Staff
+          a(class="nav-link aProp" aria-current="page" href="/provider") Provider
+          a(class="nav-link aProp" href="/manager") Manager
+          a(class="nav-link aProp" href="/staff") Staff
           a(class="nav-link aProp" href="/faqs") FAQs
 
       div.offCanvasStyle(class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel")
@@ -28,9 +28,12 @@ html
         div(class="offcanvas-body" style="padding: 0; margin: 0")
           div(class="dropdown mt-2" style="padding: 0; margin: 0")
             ul(aria-labelledby="dropdownMenuButton" style="padding: 0; margin: 0")
-              li.ddoption Provider Tutorials
-              li.ddoption Office Manager Tutorials
-              li.ddoption Office Staff Tutorials
+              li.ddoption 
+                a(style="text-decoration:none" href="/provider") Provider Tutorials
+              li.ddoption 
+                a(style="text-decoration:none" href="/manager") Office Manager Tutorials
+              li.ddoption
+                a(style="text-decoration:none" href="/staff") Office Staff Tutorials
               li.ddoption 
                 a(style="text-decoration:none" href="/faqs") FAQs
 
