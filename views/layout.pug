@@ -12,7 +12,7 @@ html
       nav(class="nav nav-pills nav-fill fixed-top navStyle")
         div(style="display: flex;")
           img.headerImg(src="images/mspb_logo.jpeg" alt="MSPB" width="55" height="55")
-          a(class="btn bProp" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample")
+          a(class="btn bProp" data-bs-toggle="offcanvas" href="#mainOffCanvas" role="button" aria-controls="mainOffCanvas")
             span(class="fa-solid fa-bars fa-2xl fa-beat-fade lProp")
         div.aDiv
           a(class="nav-link aProp" href="/")  Home
@@ -21,21 +21,21 @@ html
           a(class="nav-link aProp" href="/staff") Staff
           a(class="nav-link aProp" href="/faqs") FAQs
 
-      div.offCanvasStyle(class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel")
+      div.offCanvasStyle(class="offcanvas offcanvas-start" tabindex="-1" id="mainOffCanvas" aria-labelledby="mainOffCanvasLabel")
         div(class="offcanvas-header")
-          h3(style="font-size: 4.5em;") Menu
-          button(type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" style="margin-right: 10px;")
+          h3.canvasTitle Menu
+          button(type="button" class="btn-close text-reset offCanvasClose" data-bs-dismiss="offcanvas" aria-label="Close")
         div(class="offcanvas-body" style="padding: 0; margin: 0")
           div(class="dropdown mt-2" style="padding: 0; margin: 0")
             ul(aria-labelledby="dropdownMenuButton" style="padding: 0; margin: 0")
-              li.ddoption 
-                a(style="text-decoration:none" href="/prdr") Provider Tutorials
-              li.ddoption 
-                a(style="text-decoration:none" href="/mgr") Office Manager Tutorials
-              li.ddoption
-                a(style="text-decoration:none" href="/staff") Office Staff Tutorials
-              li.ddoption 
-                a(style="text-decoration:none" href="/faqs") FAQs
+              li.canvasObject 
+                a.canvasMenuOption(href="/prdr") Provider Tutorials
+              li.canvasObject 
+                a.canvasMenuOption(href="/mgr") Office Manager Tutorials
+              li.canvasObject
+                a.canvasMenuOption(href="/staff") Office Staff Tutorials
+              li.canvasObject 
+                a.canvasMenuOption(href="/faqs") FAQs
 
     script(src='/javascripts/getQuestionText.js')
 
