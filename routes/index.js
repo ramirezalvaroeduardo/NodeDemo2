@@ -11,8 +11,8 @@ router.get('/pvdr', function(req, res) {
   res.render('pvdr', '');
 })
 
-router.get('/mgr', function(req, res) {
-  res.render('mgr', '');
+router.get('/upmr', function(req, res) {
+  res.render('upmr', '');
 })
 
 router.get('/staff', function(req, res) {
