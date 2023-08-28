@@ -23,6 +23,10 @@ router.get('/faqs', function(req, res) {
   res.render('faqs', '');
 })
 
+router.get('/tutorials', function(req, res) {
+  res.render('tutorials', '');
+})
+
 router.post('/sendDMail', function(req, res) {
   sendDMail.sendQuestion('MSPB Question.', req.body.question);
 })

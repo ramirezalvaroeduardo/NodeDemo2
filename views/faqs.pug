@@ -1,4 +1,3 @@
-
 extends layout
 
 block content
@@ -10,49 +9,25 @@ block content
     hr 
 
     div(class="card cardStyle")
-      div(class="card-header h3Style") Common Questions and Answers
+      div(class="card-header h3Style") Frequently Asked Questions
       div(class="card-body")
+        h4.h4CardStyle Transitional Care Management (TCM):
         blockquote(class="blockquote mb-0 cardBlockStyle")
-          div(class="accordion" id="accordionQA")
+          div(class="accordion" id="accordionQA" )
             div(class="accordion-item" style="margin-left: 35px; width: 92%;")
               h2(class="accordion-header" id="headingOne")
-                button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" ) Question Item No 1
+                button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" ) Can you do a TCM and AWV at the same time?
               div(class="accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionQA")
                 div(class="accordion-body")
-                  h4 A1: 111111
-                  h4 A2: 222222.
+                  h4 You can do both in one visit, but you CANNOT bill the TCM 99495/99496 with the AWV G0438/9 code. You can, however, report the 1111F medication reconciliation code along with the AWV visit.
             div(class="accordion-item" style="margin-left: 35px; width: 92%;")
               h2(class="accordion-header" id="headingTwo")
-                button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo") Question Item No 2
+                button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo") Can you do a TCM over telehealth?
               div(class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionQA")
                 div(class="accordion-body")
-                  h4 A1: 111111
-                  h4 A2: 222222.
-            div(class="accordion-item" style="margin-left: 35px; width: 92%;")
-              h2(class="accordion-header" id="headingThree")
-                button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree") Question Item No 3
-              div(class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionQA")
-                div(class="accordion-body")
-                  h4 A1: 111111
-                  h4 A2: 222222.
+                  h4 Yes, as long as it is a face-to-face visit, the 99495/6 can be billed. (Doximity, Athena Telehealth Beta, etc.)
 
   hr 
-
-  div(class="card cardStyle")
-    div(class="card-header h3Style") Videos
-    div(class="card-body")
-      blockquote(class="blockquote mb-0 cardBlockStyle")
-        ol(style="margin-left: 0.4em;")
-          li()
-            div(style=" display: flex; align-items: top;")
-              video(width='80' heigth='120' controls)
-                  source(src='videos/test_tutorial.mov')
-                  Your browser does not support the video tag/type.
-              div.textVideoStyle()
-                p.vStyle Title: Test Primer Tutorial
-                p.vStyle Author: Laura Ramirez
-
-  hr
 
   div(class="card cardStyle")
     div(class="card-header h3Style") Email your question
