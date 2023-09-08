@@ -12,16 +12,29 @@ html
       nav(class="nav nav-pills nav-fill fixed-top navStyle")
         div(style="display: flex;")
           img.headerImg(src="images/mspb_logo.jpeg" alt="MSPB" width="55" height="55")
-          a(class="btn bProp" data-bs-toggle="offcanvas" href="#mainOffCanvas" role="button" aria-controls="mainOffCanvas")
-            span(class="fa-solid fa-bars lProp btn2 fa-change-case")
-              |   MENU
+          a(class="nav-link aProp" data-bs-toggle="offcanvas" href="#mainOffCanvas" role="button" aria-controls="mainOffCanvas")
+            div(style="display: block;")
+              span(class="fa-solid fa-bars") 
+              p(class="headerIcons") Menu
         div.aDiv
-          a(class="nav-link aProp" href="/") Home
-          a(class="nav-link aProp" aria-current="page" href="/pvdr") Provider
-          a(class="nav-link aProp" href="/upmr") Management
-          a(class="nav-link aProp" href="/staff") Staff
-          a(class="nav-link aProp" href="/faqs") FAQs
-          a(class="nav-link aProp" href="/tutorials") Tutorials
+          a(class="nav-link aProp" href="/") 
+            span(class="fa-solid fa-house") 
+            p(class="headerIcons") Home
+          a(class="nav-link aProp" aria-current="page" href="/pvdr")
+            span(class="fa-solid fa-hospital-user") 
+            p(class="headerIcons") Provider
+          a(class="nav-link aProp" href="/upmr") 
+            span(class="fa-solid fa-building-user") 
+            p(class="headerIcons") Management
+          a(class="nav-link aProp" href="/staff") 
+            span(class="fa-solid fa-users") 
+            p(class="headerIcons") Staff
+          a(class="nav-link aProp" href="/faqs")
+            span(class="fa-solid fa-person-circle-question") 
+            p(class="headerIcons") FAQs
+          a(class="nav-link aProp" href="/tutorials")
+            span(class="fa-solid fa-video") 
+            p(class="headerIcons") Tutorials
 
 
       div.offCanvasStyle(class="offcanvas offcanvas-start" tabindex="-1" id="mainOffCanvas" aria-labelledby="mainOffCanvasLabel")
