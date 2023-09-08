@@ -27,7 +27,7 @@ body {
 
 .headerIcons {
 	margin:0;
-	font-size: 0.5em; 
+	font-size: 0.8em; 
 	text-transform: none;"
 }
 
@@ -295,13 +295,13 @@ hr {
 
 @media screen and (min-width: 415px) {
 	body {
-		font-size: 0.9em;
+		font-size: 0.95em;
 	}
 }
 
 @media screen and (min-widh: 768px) {
 	body {
-		font-size: 0.4em;
+		font-size: 0.2em;
 	}
 }
 
