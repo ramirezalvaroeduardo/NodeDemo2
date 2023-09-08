@@ -190,7 +190,7 @@ hr {
   background-color: DodgerBlue;
   border: none;
   color: white;
-  padding: 0.5em 1em;
+  padding: 0.625em 1em;
   font-size: 16px;
   cursor: pointer;
   border-radius: 9.0em;
@@ -212,7 +212,7 @@ hr {
 .addQnA {
   position: absolute;
   right: 0.25em;
-  top:  0.5em;
+  top:  0.35em;
   /*border: 1px solid #aaa;
   color: #0C63E4;
 	border-radius: 90px;
