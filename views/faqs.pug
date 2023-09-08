@@ -9,25 +9,25 @@ block content
     hr
 
     //
-      div(class="card cardStyle")
-        div(class="card-header h3Style") Frequently Asked Questions from DB
-          button(type="button" class="addQnA btn2" data-bs-toggle="modal" data-bs-target="#captureModal")
-            i(class='fa-solid fa-plus fa-lg')
-              //button(class='addQnA btn2' data-bs-toggle="modal" data-bs-target="#staticBackdrop")
-              //exampleModal" 
-              //onClick='addQuestion("", "", "")')
-        div(class="card-body")
-          h4.h4CardStyle Transitional Care Management (TCM) from DB:
-          blockquote(class="blockquote mb-0 cardBlockStyle")
-            div(class="accordion" id="accordionQAFromDB" )
-              each item in qnaArray
-                - var question = 'o ' + item.question + '?'
-                div(class="accordion-item accordionItemStyle")
-                  h2(class="accordion-header" id="heading" + item.freq_questions_id)
-                    button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#coll" + item.freq_questions_id aria-expanded="true" aria-controls="coll" + item.freq_questions_id )= question
-                  div(class="accordion-collapse collapse" id="coll" + item.freq_questions_id aria-labelledby="heading" + item.freq_questions_id data-bs-parent="#accordionQAFromDB")
-                    div(class="accordion-body")
-                      h4= item.answer
+    div(class="card cardStyle")
+      div(class="card-header h3Style") Frequently Asked Questions from DB
+        button(type="button" class="addQnA btn2" data-bs-toggle="modal" data-bs-target="#captureModal")
+          i(class='fa-solid fa-plus fa-lg')
+            //button(class='addQnA btn2' data-bs-toggle="modal" data-bs-target="#staticBackdrop")
+            //exampleModal" 
+            //onClick='addQuestion("", "", "")')
+      div(class="card-body")
+        h4.h4CardStyle Transitional Care Management (TCM) from DB:
+        blockquote(class="blockquote mb-0 cardBlockStyle")
+          div(class="accordion" id="accordionQAFromDB" )
+            each item in qnaArray
+              - var question = 'o ' + item.question + '?'
+              div(class="accordion-item accordionItemStyle")
+                h2(class="accordion-header" id="heading" + item.freq_questions_id)
+                  button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#coll" + item.freq_questions_id aria-expanded="true" aria-controls="coll" + item.freq_questions_id )= question
+                div(class="accordion-collapse collapse" id="coll" + item.freq_questions_id aria-labelledby="heading" + item.freq_questions_id data-bs-parent="#accordionQAFromDB")
+                  div(class="accordion-body")
+                    h4= item.answer
 
 
     hr 
