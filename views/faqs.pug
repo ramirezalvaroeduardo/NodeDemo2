@@ -8,14 +8,11 @@ block content
 
     hr
 
-    //
+    // QnA from DB section
     div(class="card cardStyle")
       div(class="card-header h3Style") Frequently Asked Questions from DB
         button(type="button" class="addQnA btn2" data-bs-toggle="modal" data-bs-target="#captureModal")
           i(class='fa-solid fa-plus fa-lg')
-            //button(class='addQnA btn2' data-bs-toggle="modal" data-bs-target="#staticBackdrop")
-            //exampleModal" 
-            //onClick='addQuestion("", "", "")')
       div(class="card-body")
         h4.h4CardStyle Transitional Care Management (TCM) from DB:
         blockquote(class="blockquote mb-0 cardBlockStyle")
@@ -28,10 +25,9 @@ block content
                 div(class="accordion-collapse collapse" id="coll" + item.freq_questions_id aria-labelledby="heading" + item.freq_questions_id data-bs-parent="#accordionQAFromDB")
                   div(class="accordion-body")
                     h4= item.answer
-
-
     hr 
 
+    // QnA Hardcoded section
     div(class="card cardStyle")
       div(class="card-header h3Style") Frequently Asked Questions
       div(class="card-body")
@@ -53,6 +49,7 @@ block content
 
     hr 
 
+    // QnA Email section
     div(class="card cardStyle")
       div(class="card-header h3Style") Email your question
       div(class="card-body")
@@ -62,22 +59,7 @@ block content
           div
             textarea.questionText(id='dQuestion' placeholder='Write your question' rows=3)
           button.sendStyle(onClick='sendDMail("dQuestion")') Send
-
-
-
-    // Section for Alert BootStrap Modal
-    div(class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true")
-      div(class="modal-dialog")
-        div(class="modal-content")
-          div(class="modal-header")
-            h4(class="modal-title" id="staticBackdropLabel") Alert!
-            button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
-          div(class="modal-body")
-            | Adding Questions is Under Construction....
-          div(class="modal-footer")
-            button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Close
-
-
+          
 
     // Section for Capture Form Bootstrap Modal
     div(class="modal fade" id="captureModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
@@ -101,6 +83,15 @@ block content
             button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Cancel
             button(class="btn btn-primary" data-bs-dismiss="modal" onClick='addQuestion(qnaContext.value, qnaQuestion.value, qnaAnswer.value)') Submit
 
-
-
+    // Section for Alert BootStrap Modal
+    div(class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true")
+      div(class="modal-dialog")
+        div(class="modal-content")
+          div(class="modal-header")
+            h4(class="modal-title" id="staticBackdropLabel") Alert!
+            button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+          div(class="modal-body")
+            | Adding Questions is Under Construction....
+          div(class="modal-footer")
+            button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Close
 

@@ -177,7 +177,7 @@ hr {
 }
 
 .lProp {
-  padding: 0 0 0 0.4em;
+  padding: 0.em;
   margin: 0;
  	cursor: pointer;
 	text-align: center;
@@ -190,7 +190,7 @@ hr {
   background-color: DodgerBlue;
   border: none;
   color: white;
-  padding: 1.0em 1.0em;
+  padding: 0.5em 1em;
   font-size: 16px;
   cursor: pointer;
   border-radius: 9.0em;
