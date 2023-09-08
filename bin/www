@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('nodedemo2:server');
 var http = require('http');
+var pgConn = require('../routes/dbHelper.js');
 
 /**
  * Get port from environment and store in Express.
@@ -87,4 +88,14 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+  console.log('Application listening on port:', port);
 }
+
+/**
+ * Open connection to PostGress DB
+ */
+
+pgPool = pgConn.openPGConn();
+app.set('pgPool', pgPool);
+console.log('Connected to PostGress DB.');
+

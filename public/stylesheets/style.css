@@ -75,7 +75,7 @@ body {
   font-size: 1.25em;
 }
 
-h5, .questionText {
+.questionText {
   margin: 0px 0px 0px 55px;
   padding: 0 5px 0 10px;
   font-size: 1.25em;
@@ -183,19 +183,56 @@ hr {
 	text-align: center;
 	vertical-align: bottom;
 	color: #fff;
-	zoom: 150%;
+/*	zoom: 60%; */
+}
+
+.btn2 {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 1.0em 1.0em;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 9.0em;
+  font-weight: bold;
+}
+
+.btn2:hover {
+  background-color: RoyalBlue;
 }
 
 .bProp {
 	display: flex;
 	align-items: center;
-	padding: 0;
+	padding: 0em;
 	margin: 0;
+	border:  0;
 }
+
+.addQnA {
+  position: absolute;
+  right: 0.25em;
+  top:  0.125em;
+  /*border: 1px solid #aaa;
+  color: #0C63E4;
+	border-radius: 90px;
+	background-color: #fff;
+	font-weight: 700;*/
+}
+
+
+/* Accordion Styles */
 
 .bAccordProp {
 	font-size: 0.75em;
 }
+
+.accordionItemStyle {
+	margin-left: 35px; 
+	width: 92%;
+}
+
+/* */
 
 /* Card Style */
 .cardStyle {

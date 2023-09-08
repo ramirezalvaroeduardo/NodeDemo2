@@ -13,9 +13,10 @@ html
         div(style="display: flex;")
           img.headerImg(src="images/mspb_logo.jpeg" alt="MSPB" width="55" height="55")
           a(class="btn bProp" data-bs-toggle="offcanvas" href="#mainOffCanvas" role="button" aria-controls="mainOffCanvas")
-            span(class="fa-solid fa-bars fa-2xl fa-beat-fade lProp")
+            span(class="fa-solid fa-bars lProp btn2 fa-change-case")
+              |   MENU
         div.aDiv
-          a(class="nav-link aProp" href="/")  Home
+          a(class="nav-link aProp" href="/") Home
           a(class="nav-link aProp" aria-current="page" href="/pvdr") Provider
           a(class="nav-link aProp" href="/upmr") Management
           a(class="nav-link aProp" href="/staff") Staff
@@ -36,7 +37,7 @@ html
                 a.canvasMenuOption(href="/upmr") Office Manager Tutorials
               li.canvasObject
                 a.canvasMenuOption(href="/staff") Office Staff Tutorials
-              li.canvasObject 
+              li.canvasObject
                 a.canvasMenuOption(href="/faqs") FAQs
               li.canvasObject 
                 a.canvasMenuOption(href="/tutorials") Tutorials
@@ -45,5 +46,6 @@ html
 
     script(src='/javascripts/faqs.js')
     script(src='/javascripts/sendDMail.js')
+    script(src='/javascripts/addQuestion.js')
     script(src='/javascripts/jquery.min.js')
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous")

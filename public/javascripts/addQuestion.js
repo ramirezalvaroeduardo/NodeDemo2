@@ -1,14 +1,16 @@
 
-function sendDMail(dText) {
-	var dData = {
-		'question': document.getElementById(dText).value
-	}
+function addQuestion(context, question, answer) {
 
+	var qnaData = {
+		'context': context,
+		'question': question,
+		'answer':  answer,
+	}
 	try{
 		$.ajax({
 			method: 'POST',
-			url: '/sendDMail',
-			data: dData,
+			url: '/addQuestion',
+			data: qnaData,
 			datatype: 'JSON'
 		})
 		.done(function(res) {
@@ -20,5 +22,6 @@ function sendDMail(dText) {
 	} catch ( dExc ) {
         console.log( 'sendDMail(.) - E [' + dExc.message + ']' );
     }
-    alert("Email Sent.");
+
+    alert("Add Question under construction.");
 }

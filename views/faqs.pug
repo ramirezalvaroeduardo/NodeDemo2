@@ -6,6 +6,30 @@ block content
     div.commonStyle(align="center")
       img.imgStyle(src="images/mspb_logo.jpeg" alt="MSPB" width="160" height="160" align="center")
 
+    hr
+
+    //
+      div(class="card cardStyle")
+        div(class="card-header h3Style") Frequently Asked Questions from DB
+          button(type="button" class="addQnA btn2" data-bs-toggle="modal" data-bs-target="#captureModal")
+            i(class='fa-solid fa-plus fa-lg')
+              //button(class='addQnA btn2' data-bs-toggle="modal" data-bs-target="#staticBackdrop")
+              //exampleModal" 
+              //onClick='addQuestion("", "", "")')
+        div(class="card-body")
+          h4.h4CardStyle Transitional Care Management (TCM) from DB:
+          blockquote(class="blockquote mb-0 cardBlockStyle")
+            div(class="accordion" id="accordionQAFromDB" )
+              each item in qnaArray
+                - var question = 'o ' + item.question + '?'
+                div(class="accordion-item accordionItemStyle")
+                  h2(class="accordion-header" id="heading" + item.freq_questions_id)
+                    button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#coll" + item.freq_questions_id aria-expanded="true" aria-controls="coll" + item.freq_questions_id )= question
+                  div(class="accordion-collapse collapse" id="coll" + item.freq_questions_id aria-labelledby="heading" + item.freq_questions_id data-bs-parent="#accordionQAFromDB")
+                    div(class="accordion-body")
+                      h4= item.answer
+
+
     hr 
 
     div(class="card cardStyle")
@@ -27,14 +51,56 @@ block content
                 div(class="accordion-body")
                   h4 Yes, as long as it is a face-to-face visit, the 99495/6 can be billed. (Doximity, Athena Telehealth Beta, etc.)
 
-  hr 
+    hr 
 
-  div(class="card cardStyle")
-    div(class="card-header h3Style") Email your question
-    div(class="card-body")
-      blockquote(class="blockquote mb-0 cardBlockStyle")
-        div
-          label.labelStyle(for='dQuestion') Question
-        div
-          textarea.questionText(id='dQuestion' placeholder='Write your question' rows=3)
-        button.sendStyle(onClick='sendDMail("dQuestion")') Send
+    div(class="card cardStyle")
+      div(class="card-header h3Style") Email your question
+      div(class="card-body")
+        blockquote(class="blockquote mb-0 cardBlockStyle")
+          div
+            label.labelStyle(for='dQuestion') Question
+          div
+            textarea.questionText(id='dQuestion' placeholder='Write your question' rows=3)
+          button.sendStyle(onClick='sendDMail("dQuestion")') Send
+
+
+
+    // Section for Alert BootStrap Modal
+    div(class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true")
+      div(class="modal-dialog")
+        div(class="modal-content")
+          div(class="modal-header")
+            h4(class="modal-title" id="staticBackdropLabel") Alert!
+            button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+          div(class="modal-body")
+            | Adding Questions is Under Construction....
+          div(class="modal-footer")
+            button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Close
+
+
+
+    // Section for Capture Form Bootstrap Modal
+    div(class="modal fade" id="captureModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+      div(class="modal-dialog")
+        div(class="modal-content")
+          div(class="modal-header")
+            h5(class="modal-title" id="exampleModalLabel") Add Question and Answer
+            button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+          div(class="modal-body")
+            form
+              div(class="mb-3")
+                label(for="qnaContext" class="col-form-label") Context:
+                textarea(class="form-control" id="qnaContext" placeholder='Write the Context' rows=1)
+              div(class="mb-3")
+                label(for="qnaQuestion" class="col-form-label") Question:
+                textarea(class="form-control" id="qnaQuestion" placeholder='Write the Question' rows=3)
+              div(class="mb-3")
+                label(for="qnaAnswer" class="col-form-label") Answer:
+                textarea(class="form-control" id="qnaAnswer" placeholder='Write the Answer' rows=3)
+          div(class="modal-footer")
+            button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Cancel
+            button(class="btn btn-primary" data-bs-dismiss="modal" onClick='addQuestion(qnaContext.value, qnaQuestion.value, qnaAnswer.value)') Submit
+
+
+
+
