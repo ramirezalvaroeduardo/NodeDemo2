@@ -38,7 +38,6 @@ router.get('/faqs', function(req, res) {
 
 router.post('/addQuestion', function(req, res) {
   const qnaData = req.body;
-
   qnaHelper.addQNA(pgPool, qnaData, function(err, data){
     if (err) {
       console.log('Error adding data to DB:', err)
