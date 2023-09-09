@@ -41,9 +41,10 @@ router.post('/addQuestion', function(req, res) {
   qnaHelper.addQNA(pgPool, qnaData, function(err, data){
     if (err) {
       console.log('Error adding data to DB:', err)
+      res.sendStatus(500).end();
+    } else {
+      res.sendStatus(200).end();
     }
-    /* TODO : Close response back */
-    res.sendStatus(200).end();
   });
 })
 

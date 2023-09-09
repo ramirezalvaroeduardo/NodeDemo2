@@ -30,7 +30,7 @@ var addQNA = async function addQNA(pgPool, qnaData, cbFunction) {
 	pgConn = chkDBConn(pgPool);
 	try {
 		var resData = await(pgConn.query(addQnASql));
-		cbFunction(undefined, 'OK');
+		cbFunction(undefined, resData);
 	} catch (err) {
 		cbFunction(err, undefined);
 	}

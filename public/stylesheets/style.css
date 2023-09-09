@@ -46,6 +46,11 @@ body {
 	font-weight: bold;
 }
 
+.ulCanvas{
+	padding: 0;
+	margin: 0;
+}
+
 .canvasObject {
   margin: 0px 0px 0.25em 2em;
   padding: 0;
@@ -292,18 +297,22 @@ hr {
 	margin-bottom: 0;
 }
 
-
-@media screen and (min-width: 415px) {
+@media only screen and (min-width: 415px) {
 	body {
 		font-size: 0.95em;
 	}
+	.ulCanvas {
+		 zoom: 200%;
+	}
 }
 
-@media screen and (min-widh: 768px) {
+
+@media only screen and (min-widh: 768px) {
 	body {
 		font-size: 0.2em;
 	}
 }
+
 
 /*
 #body {

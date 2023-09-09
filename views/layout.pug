@@ -43,17 +43,31 @@ html
           button(type="button" class="btn-close text-reset offCanvasClose" data-bs-dismiss="offcanvas" aria-label="Close")
         div(class="offcanvas-body" style="padding: 0; margin: 0")
           div(class="dropdown mt-2" style="padding: 0; margin: 0")
-            ul(aria-labelledby="dropdownMenuButton" style="padding: 0; margin: 0")
-              li.canvasObject 
-                a.canvasMenuOption(href="/pvdr") Provider Tutorials
-              li.canvasObject 
-                a.canvasMenuOption(href="/upmr") Office Manager Tutorials
+            ul.ulCanvas(aria-labelledby="dropdownMenuButton")
               li.canvasObject
-                a.canvasMenuOption(href="/staff") Office Staff Tutorials
-              li.canvasObject
-                a.canvasMenuOption(href="/faqs") FAQs
+                a.canvasMenuOption(href="/")
+                  span(class="fa-solid fa-house") 
+                  p(class="headerIcons") Home
               li.canvasObject 
-                a.canvasMenuOption(href="/tutorials") Tutorials
+                a.canvasMenuOption(href="/pvdr")
+                  span(class="fa-solid fa-hospital-user") 
+                  p(class="headerIcons") Provider
+              li.canvasObject 
+                a.canvasMenuOption(href="/upmr")
+                  span(class="fa-solid fa-building-user") 
+                  p(class="headerIcons") Office Manager
+              li.canvasObject
+                a.canvasMenuOption(href="/staff")
+                  span(class="fa-solid fa-users") 
+                  p(class="headerIcons") Office Staff
+              li.canvasObject
+                a.canvasMenuOption(href="/faqs")
+                  span(class="fa-solid fa-person-circle-question") 
+                  p(class="headerIcons") FAQs
+              li.canvasObject 
+                a.canvasMenuOption(href="/tutorials")
+                  span(class="fa-solid fa-video") 
+                  p(class="headerIcons") Tutorials
 
     script(src='/javascripts/getQuestionText.js')
 
