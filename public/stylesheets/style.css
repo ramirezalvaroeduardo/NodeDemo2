@@ -170,7 +170,7 @@ hr {
 
 .aDiv {
 	display: block;
-	align-items: center;
+	align-items: right;
   justify-content: space-evenly;
   margin: 0;
   padding-top: 0;
@@ -183,7 +183,7 @@ hr {
   color: #E0EFFC;
   font-size: 2.0em;
   font-weight: bold;
-  margin-right: .875em;
+  margin-right: .5em;
   margin-left: .25em;
 }
 
