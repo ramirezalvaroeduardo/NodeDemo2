@@ -19,7 +19,7 @@ block content
             div(class="accordion-item" id="accordionItems" style="border: none; margin-left: 35px; width: 98%;")
               each item in qnaArray
                 - var question = 'o ' + item.question + '?'
-                  h2(class="accordion-header" id="heading" + item.freq_questions_id style="margin:0; padding:0; border:0px")
+                  h2(class="accordion-header" id="heading" + item.freq_questions_id)
                     div(class="accordion-item accordionItemStyle")
                       button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#coll" + item.freq_questions_id aria-expanded="true" aria-controls="coll" + item.freq_questions_id )= question
                       i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#removeModal")  
@@ -31,19 +31,23 @@ block content
     // QnA Hardcoded section
     div(class="card cardStyle")
       div(class="card-header h3Style") Frequently Asked Questions
+        i(class='fa-solid fa-circle-plus fa-lg circlePlusStyle' data-bs-toggle="modal" data-bs-target="#captureModal")
       div(class="card-body")
         h4.h4CardStyle Transitional Care Management (TCM):
         blockquote(class="blockquote mb-0 cardBlockStyle")
           div(class="accordion" id="accordionQA" )
-            div(class="accordion-item" style="margin-left: 35px; width: 92%;")
+            div(class="accordion-item" style="border: none; margin-left: 35px; width: 98%;")
               h2(class="accordion-header" id="headingOne")
-                button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" ) o Can you do a TCM and AWV at the same time?
+                div(class="accordion-item accordionItemStyle")
+                  button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" ) o Can you do a TCM and AWV at the same time?
+                  i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#removeModal")
               div(class="accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionQA")
                 div(class="accordion-body")
                   h4 You can do both in one visit, but you CANNOT bill the TCM 99495/99496 with the AWV G0438/9 code. You can, however, report the 1111F medication reconciliation code along with the AWV visit.
-            div(class="accordion-item" style="margin-left: 35px; width: 92%;")
               h2(class="accordion-header" id="headingTwo")
-                button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo") o Can you do a TCM over telehealth?
+                div(class="accordion-item accordionItemStyle")
+                  button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo") o Can you do a TCM over telehealth?
+                  i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#removeModal")
               div(class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionQA")
                 div(class="accordion-body")
                   h4 Yes, as long as it is a face-to-face visit, the 99495/6 can be billed. (Doximity, Athena Telehealth Beta, etc.)
