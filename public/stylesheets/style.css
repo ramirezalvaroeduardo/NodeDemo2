@@ -236,13 +236,36 @@ hr {
 
 .bAccordProp {
 	font-size: 0.75em;
+	font-weight: 700;
+	padding-right: 0.5;
+	margin-right: 0.5em;
+	border: 1px solid rgba(0,0,0,.125);
 }
 
 .accordionItemStyle {
-	margin-left: 35px; 
-	width: 92%;
+	display: flex;
+	border: 0px;
 }
 
+.bAccordProp::after {
+	background-color: #e7f1ff;
+}
+
+.xMarkStyle {
+	position: relative;
+	left: 0.15em; 
+	top: 0.75em;
+	color:  red;
+	cursor: pointer;
+}
+
+.circlePlusStyle {
+	position: absolute; 
+	right: 0.125em; 
+	top: 0.625em; 
+	color: DodgerBlue; 
+	cursor: pointer;
+}
 /* */
 
 /* Card Style */
@@ -257,7 +280,9 @@ hr {
 	font-weight: bolder;
 	background: #E0EFFC;
 	color: #003257;
-	text-align: center;
+	text-align: right;
+	display: flex;
+	justify-content: center;
 /*
 	margin: 20px 0px 10px 15px;
   padding: 0;
