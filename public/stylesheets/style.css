@@ -8,7 +8,7 @@ body {
 @media only screen and (max-width: 980px) {
 	body {
 		font-size: 1em;
-		zoom:  180%;
+		zoom:  300%;
 	}
 	div.aDiv {
 		display: none;
