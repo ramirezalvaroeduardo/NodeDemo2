@@ -5,7 +5,7 @@ body {
   background-color:  #ddd;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 980px) {
 	body {
 		font-size: 1em;
 		zoom:  150%;
