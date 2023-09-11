@@ -13,6 +13,9 @@ body {
 	div.aDiv {
 		display: none;
 	}
+	div.fade {
+		zoom:  150%;
+	}
 }
 
 /*
