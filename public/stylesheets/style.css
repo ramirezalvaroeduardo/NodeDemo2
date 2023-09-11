@@ -16,6 +16,10 @@ body {
 	div.fade {
 		zoom:  150%;
 	}
+	div.menuItem {
+		width: 100%;
+		justify-content: space-between;
+	}
 }
 
 /*
@@ -39,6 +43,10 @@ body {
   margin-bottom: 0 0 1em 0;
 	padding: .5em 0 0 0;
 	width: 98%;
+}
+
+.menuItem {
+	display: flex;
 }
 
 .navStyle {
