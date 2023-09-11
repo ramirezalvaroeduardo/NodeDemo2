@@ -5,10 +5,13 @@ body {
   background-color:  #ddd;
 }
 
-@media only screen and (max-width: 980px) {
+@media screen and (max-width: 980px) {
 	body {
 		font-size: 1em;
-		zoom:  300%;
+		zoom:  180%;
+	}
+	div.offCanvasStyle {
+		 zoom: 200%;
 	}
 	div.aDiv {
 		display: none;
@@ -19,15 +22,9 @@ body {
 	div.menuItem {
 		width: 100%;
 		justify-content: space-between;
+		zoom:  120%;
 	}
 }
-
-/*
-	div.offCanvasStyle {
-		 zoom: 200%;
-	}
-*/
-
 
 /*
 @media screen and (min-width: 800px) {
