@@ -8,7 +8,6 @@ body {
 @media only screen and (max-width: 1200px) {
 	body {
 		font-size: 1em;
-		background-color:  #555;
 		zoom:  150%;
 	}
 	div.aDiv {
@@ -56,7 +55,8 @@ body {
 .headerIcons {
 	margin:0;
 	font-size: 0.8em; 
-	text-transform: none;"
+	text-transform: none;
+	font-weight: bold;
 }
 
 /* Canvas section */
