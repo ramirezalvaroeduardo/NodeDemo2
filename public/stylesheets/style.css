@@ -125,7 +125,8 @@ body {
 
 .h4CardStyle {
 	font-size:1.6em;
-	font-weight:bold;'
+	font-weight:bold;
+	margin-left: 0.5em;
 }
 
 .sendStyle {
@@ -268,6 +269,12 @@ hr {
 	padding-right: 0.5;
 	margin-right: 0.5em;
 	border: 1px solid rgba(0,0,0,.125);
+}
+
+.accordionItemDiv {
+	border: none; 
+	margin-left: 25px; 
+	width: 98%;"
 }
 
 .accordionItemStyle {

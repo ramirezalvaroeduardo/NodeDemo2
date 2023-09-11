@@ -16,7 +16,7 @@ block content
         h4.h4CardStyle Transitional Care Management (TCM) from DB:
         blockquote(class="blockquote mb-0 cardBlockStyle")
           div(class="accordion" id="accordionQAFromDB" )
-            div(class="accordion-item" id="accordionItems" style="border: none; margin-left: 35px; width: 98%;")
+            div(class="accordion-item accordionItemDiv" id="accordionItems")
               each item in qnaArray
                 - var question = 'o ' + item.question + '?'
                   h2(class="accordion-header" id="heading" + item.freq_questions_id)
@@ -36,7 +36,7 @@ block content
         h4.h4CardStyle Transitional Care Management (TCM):
         blockquote(class="blockquote mb-0 cardBlockStyle")
           div(class="accordion" id="accordionQA" )
-            div(class="accordion-item" style="border: none; margin-left: 35px; width: 98%;")
+            div(class="accordion-item accordionItemDiv")
               h2(class="accordion-header" id="headingOne")
                 div(class="accordion-item accordionItemStyle")
                   button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" ) o Can you do a TCM and AWV at the same time?
