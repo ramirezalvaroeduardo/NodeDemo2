@@ -5,11 +5,11 @@ body {
   background-color:  #ddd;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
 	body {
 		font-size: 1em;
 		background-color:  #555;
-		zoom:  150%;
+		zoom:  200%;
 	}
 	div.aDiv {
 		display: none;
