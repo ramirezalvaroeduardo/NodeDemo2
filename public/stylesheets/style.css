@@ -8,10 +8,10 @@ body {
 @media screen and (max-width: 980px) {
 	body {
 		font-size: 1em;
-		zoom:  180%;
+		zoom:  150%;
 	}
 	div.offCanvasStyle {
-		 zoom: 150%;
+		 zoom: 95%;
 	}
 	div.lineMenu {
 		display: block;
@@ -20,11 +20,14 @@ body {
 		display: none;
 	}
 	div.fade {
-		zoom:  150%;
+		zoom:  120%;
 	}
 	div.menuItem {
 		width: 100%;
 		justify-content: space-between;
+		zoom:  80%;
+	}
+	div.h3Style {
 		zoom:  80%;
 	}
 }
@@ -70,7 +73,7 @@ body {
 .offCanvasStyle {
 	background: #003257;
 	color: #E0EFFC;
-	width: 80%;
+	width: 90%;
 }
 
 .canvasTitle {
