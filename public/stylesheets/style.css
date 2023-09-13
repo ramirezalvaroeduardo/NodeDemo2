@@ -13,6 +13,9 @@ body {
 	div.offCanvasStyle {
 		 zoom: 150%;
 	}
+	div.lineMenu {
+		display: block;
+	}
 	div.aDiv {
 		display: none;
 	}
@@ -26,16 +29,6 @@ body {
 	}
 }
 
-/*
-@media screen and (min-width: 800px) {
-	body {
-		font-size: 4em;
-		background-color:  #333;
-	}
-}
-*/
-
-
 .header_div {
   margin-bottom: 0 0 1em 0;
 	padding: .5em 0 0 0;
@@ -46,10 +39,14 @@ body {
 	display: flex;
 }
 
+.lineMenu {
+	display:  none;
+}
+
 .navStyle {
 	display: flex;
 	justify-content: space-between;
-	padding: 0.5em 0.5em 0.5em 0px; 
+	padding: 0.5em 0.5em 0.5em 8px; 
 	margin:0; 
 	background: #003257;"
 }
