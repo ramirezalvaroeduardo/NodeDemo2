@@ -11,7 +11,7 @@ body {
 		zoom:  150%;
 	}
 	div.offCanvasStyle {
-		 zoom: 95%;
+		 zoom: 100%;
 	}
 	div.lineMenu {
 		display: block;
@@ -20,7 +20,7 @@ body {
 		display: none;
 	}
 	div.fade {
-		zoom:  120%;
+		zoom:  125%;
 	}
 	div.menuItem {
 		width: 100%;
