@@ -16,7 +16,8 @@ function addElement(parentElement, qnaData) {
 	newElement += '<div class="accordion-item accordionItemStyle" style="justify-content: space-between; border:0px">'
 	newElement += '<button class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#coll' + theID + '" aria-expanded="true" aria-controls="coll' + theID + '">';
 	newElement += 'o ' + qnaData.question + '?</button>';
-	newElement += '<i class="fa-solid fa-circle-xmark fa-lg xMarkStyle" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-uuidkey="' + theID + '" id="' + theID + '"">';
+	newElement += '<i class="fa-solid fa-pencil fa-lg pencilStyle" data-bs-toggle="modal" data-bs-target="#updateModal" data-bs-uuidkey="' + theID + '" id="' + theID + '"></i>';
+	newElement += '<i class="fa-solid fa-circle-xmark fa-lg xMarkStyle" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-uuidkey="' + theID + '" id="' + theID + '">';
 	newElement += '</i></div></h2>';
 	newElement += '<div class="accordion-collapse collapse" id="coll' + theID + '" aria-labelledby="heading' + theID + '" data-bs-parent="#accordionQAFromDB">';
 	newElement += '<div class="accordion-body">';

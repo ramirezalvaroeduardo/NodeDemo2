@@ -298,6 +298,15 @@ hr {
 	cursor: pointer;
 }
 
+.pencilStyle {
+	position: relative;
+	left: 0.05em; 
+	top: 0.75em;
+	color:  green;
+	cursor: pointer;
+
+}
+
 .circlePlusStyle {
 	position: absolute; 
 	right: 0.125em; 

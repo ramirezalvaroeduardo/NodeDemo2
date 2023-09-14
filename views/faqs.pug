@@ -23,6 +23,7 @@ block content
                   h2(class="accordion-header" id="heading" + item.uuid_key)
                     div(class="accordion-item accordionItemStyle")
                       button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#coll" + item.uuid_key aria-expanded="true" aria-controls="coll" + item.uuid_key )= question
+                      i(class="fa-solid fa-pencil fa-lg pencilStyle" data-bs-toggle="modal" data-bs-target="#updateModal" data-bs-uuidkey="" + item.uuid_key id="" + item.uuid_key )
                       i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-uuidkey="" + item.uuid_key id="" + item.uuid_key )
                       //  onClick='delQuestion("' + item.uuid_key + '")')
                       // TODO: redirect removal for confirmation.
@@ -43,6 +44,7 @@ block content
               h2(class="accordion-header" id="headingOne")
                 div(class="accordion-item accordionItemStyle")
                   button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" ) o Can you do a TCM and AWV at the same time?
+                  i(class="fa-solid fa-pencil fa-lg pencilStyle" data-bs-toggle="modal" data-bs-target="#updateModal")
                   i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#deleteModal")
               div(class="accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionQA")
                 div(class="accordion-body")
@@ -50,6 +52,7 @@ block content
               h2(class="accordion-header" id="headingTwo")
                 div(class="accordion-item accordionItemStyle")
                   button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo") o Can you do a TCM over telehealth?
+                  i(class="fa-solid fa-pencil fa-lg pencilStyle" data-bs-toggle="modal" data-bs-target="#updateModal")
                   i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#deleteModal")
               div(class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionQA")
                 div(class="accordion-body")
@@ -106,13 +109,13 @@ block content
             button(type="button" class="btn btn-primary" data-bs-dismiss="modal" id="exeDeleteQuestion") Delete
 
     // Section for Alert BootStrap Modal
-      div(class="modal fade" id="removeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true")
-        div(class="modal-dialog")
-          div(class="modal-content")
-            div(class="modal-header")
-              h4(class="modal-title" id="staticBackdropLabel") Alert!
-              button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
-            div(class="modal-body")
-              | Deleting Questions is Under Construction....
-            div(class="modal-footer")
-              button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Close
+    div(class="modal fade" id="updateModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true")
+      div(class="modal-dialog")
+        div(class="modal-content")
+          div(class="modal-header")
+            h4(class="modal-title" id="staticBackdropLabel") Alert!
+            button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+          div(class="modal-body")
+            | Update Questions is Under Construction....
+          div(class="modal-footer")
+            button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Close

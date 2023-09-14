@@ -50,7 +50,6 @@ router.post('/addQuestion', function(req, res) {
 
 router.post('/delQuestion', function(req, res) {
   const qnaData = req.body;
-  console.log('index.js /delQuestion:', qnaData)
   qnaHelper.delQNA(pgPool, qnaData, function(err, data){
     if (err) {
       console.log('Error removing data from DB:', err)
