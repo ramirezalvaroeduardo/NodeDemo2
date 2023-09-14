@@ -23,7 +23,8 @@ block content
                   h2(class="accordion-header" id="heading" + item.uuid_key)
                     div(class="accordion-item accordionItemStyle")
                       button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#coll" + item.uuid_key aria-expanded="true" aria-controls="coll" + item.uuid_key )= question
-                      i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#removeModal" id="" + item.uuid_key  onClick='delQuestion("' + item.uuid_key + '")')
+                      i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-uuidkey="" + item.uuid_key id="" + item.uuid_key )
+                      //  onClick='delQuestion("' + item.uuid_key + '")')
                       // TODO: redirect removal for confirmation.
                   div(class="accordion-collapse collapse" id="coll" + item.uuid_key aria-labelledby="heading" + item.uuid_key data-bs-parent="#accordionQAFromDB")
                     div(class="accordion-body")
@@ -42,14 +43,14 @@ block content
               h2(class="accordion-header" id="headingOne")
                 div(class="accordion-item accordionItemStyle")
                   button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" ) o Can you do a TCM and AWV at the same time?
-                  i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#removeModal")
+                  i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#deleteModal")
               div(class="accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionQA")
                 div(class="accordion-body")
                   h4 You can do both in one visit, but you CANNOT bill the TCM 99495/99496 with the AWV G0438/9 code. You can, however, report the 1111F medication reconciliation code along with the AWV visit.
               h2(class="accordion-header" id="headingTwo")
                 div(class="accordion-item accordionItemStyle")
                   button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo") o Can you do a TCM over telehealth?
-                  i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#removeModal")
+                  i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#deleteModal")
               div(class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionQA")
                 div(class="accordion-body")
                   h4 Yes, as long as it is a face-to-face visit, the 99495/6 can be billed. (Doximity, Athena Telehealth Beta, etc.)
@@ -69,11 +70,11 @@ block content
 
 
     // Section for Capture Form Bootstrap Modal
-    div(class="modal fade" id="captureModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+    div(class="modal fade" id="captureModal" tabindex="-1" aria-labelledby="captureModalLabel" aria-hidden="true")
       div(class="modal-dialog")
         div(class="modal-content")
           div(class="modal-header")
-            h5(class="modal-title" id="exampleModalLabel") Add Question and Answer
+            h5(class="modal-title" id="captureModalLabel") Add Question and Answer
             button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
           div(class="modal-body")
             form
@@ -90,15 +91,28 @@ block content
             button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Cancel
             button(class="btn btn-primary" data-bs-dismiss="modal" onClick='addQuestion(qnaContext.value, qnaQuestion.value, qnaAnswer.value)') Submit
 
-    // Section for Alert BootStrap Modal
-    div(class="modal fade" id="removeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true")
+    // Section to confirm deletion of Question
+    div(class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true")
       div(class="modal-dialog")
         div(class="modal-content")
           div(class="modal-header")
-            h4(class="modal-title" id="staticBackdropLabel") Alert!
+            h5(class="modal-title" id="deleteModalLabel") Deleting Question
             button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+              span(aria-hidden="true") &times;
           div(class="modal-body")
-            | Adding Questions is Under Construction....
+            p Are you sure you want to delete the question?
           div(class="modal-footer")
-            button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Close
+            button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Cancel
+            button(type="button" class="btn btn-primary" data-bs-dismiss="modal" id="exeDeleteQuestion") Delete
 
+    // Section for Alert BootStrap Modal
+      div(class="modal fade" id="removeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true")
+        div(class="modal-dialog")
+          div(class="modal-content")
+            div(class="modal-header")
+              h4(class="modal-title" id="staticBackdropLabel") Alert!
+              button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            div(class="modal-body")
+              | Deleting Questions is Under Construction....
+            div(class="modal-footer")
+              button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Close

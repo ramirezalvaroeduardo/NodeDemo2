@@ -19,7 +19,6 @@ var getQNA = async function getQNA(pgPool, cbFunction) {
 	pgConn = chkDBConn(pgPool);
 	try {
 		var resData = await(pgConn.query(allQnA));
-		console.log('qnaHelper.js getQnA: ', resData.rows);
 		cbFunction(undefined, resData.rows);
 	} catch (err) {
 		cbFunction(err, undefined);
