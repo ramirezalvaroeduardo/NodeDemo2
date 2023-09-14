@@ -20,11 +20,12 @@ block content
             div(class="accordion-item accordionItemDiv" id="accordionItems")
               each item in qnaArray
                 - var question = 'o ' + item.question + '?'
-                  h2(class="accordion-header" id="heading" + item.freq_questions_id)
+                  h2(class="accordion-header" id="heading" + item.uuid_key)
                     div(class="accordion-item accordionItemStyle")
-                      button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#coll" + item.freq_questions_id aria-expanded="true" aria-controls="coll" + item.freq_questions_id )= question
-                      i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#removeModal")  
-                  div(class="accordion-collapse collapse" id="coll" + item.freq_questions_id aria-labelledby="heading" + item.freq_questions_id data-bs-parent="#accordionQAFromDB")
+                      button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#coll" + item.uuid_key aria-expanded="true" aria-controls="coll" + item.uuid_key )= question
+                      i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#removeModal" id="" + item.uuid_key  onClick='delQuestion("' + item.uuid_key + '")')
+                      // TODO: redirect removal for confirmation.
+                  div(class="accordion-collapse collapse" id="coll" + item.uuid_key aria-labelledby="heading" + item.uuid_key data-bs-parent="#accordionQAFromDB")
                     div(class="accordion-body")
                       h4= item.answer
     hr 

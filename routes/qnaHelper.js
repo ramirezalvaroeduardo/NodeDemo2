@@ -19,6 +19,7 @@ var getQNA = async function getQNA(pgPool, cbFunction) {
 	pgConn = chkDBConn(pgPool);
 	try {
 		var resData = await(pgConn.query(allQnA));
+		console.log('qnaHelper.js getQnA: ', resData.rows);
 		cbFunction(undefined, resData.rows);
 	} catch (err) {
 		cbFunction(err, undefined);
@@ -26,7 +27,7 @@ var getQNA = async function getQNA(pgPool, cbFunction) {
 }
 
 var addQNA = async function addQNA(pgPool, qnaData, cbFunction) {
-	const addQnASql = "INSERT INTO freq_questions(question, answer) VALUES('" + qnaData.question + "', '" + qnaData.answer + "');"; 
+	const addQnASql = "INSERT INTO freq_questions(question, answer, uuid_key) VALUES('" + qnaData.question + "', '" + qnaData.answer + "', '" + qnaData.uuid_key + "');"; 
 	pgConn = chkDBConn(pgPool);
 	try {
 		var resData = await(pgConn.query(addQnASql));
@@ -36,5 +37,17 @@ var addQNA = async function addQNA(pgPool, qnaData, cbFunction) {
 	}
 }
 
+var delQNA = async function delQNA(pgPool, qnaData, cbFunction) {
+	const delQnASql = "DELETE FROM freq_questions WHERE uuid_key = '" + qnaData.uuid_key + "';"; 
+	pgConn = chkDBConn(pgPool);
+	try {
+		var resData = await(pgConn.query(delQnASql));
+		cbFunction(undefined, resData);
+	} catch (err) {
+		cbFunction(err, undefined);
+	}
+}
+
 module.exports.getQNA = getQNA;
 module.exports.addQNA = addQNA;
+module.exports.delQNA = delQNA;
