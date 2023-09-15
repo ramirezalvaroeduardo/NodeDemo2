@@ -15,7 +15,7 @@ function chkDBConn(pgPool){
 }
 
 var getQNA = async function getQNA(pgPool, cbFunction) {
-	const allQnA = 'SELECT * FROM freq_questions'
+	const allQnA = 'SELECT * FROM freq_questions ORDER BY freq_questions_id;'
 	pgConn = chkDBConn(pgPool);
 	try {
 		var resData = await(pgConn.query(allQnA));
@@ -47,6 +47,18 @@ var delQNA = async function delQNA(pgPool, qnaData, cbFunction) {
 	}
 }
 
+var updQNA = async function updQNA(pgPool, qnaData, cbFunction) {
+	const delQnASql = "UPDATE freq_questions SET question = '" + qnaData.question+ "', answer = '" + qnaData.answer + "' WHERE uuid_key = '" + qnaData.uuid_key + "';"; 
+	pgConn = chkDBConn(pgPool);
+	try {
+		var resData = await(pgConn.query(delQnASql));
+		cbFunction(undefined, resData);
+	} catch (err) {
+		cbFunction(err, undefined);
+	}
+}
+
 module.exports.getQNA = getQNA;
 module.exports.addQNA = addQNA;
 module.exports.delQNA = delQNA;
+module.exports.updQNA = updQNA;

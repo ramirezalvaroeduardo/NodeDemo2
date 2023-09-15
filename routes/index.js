@@ -60,6 +60,18 @@ router.post('/delQuestion', function(req, res) {
   });
 })
 
+router.post('/updQuestion', function(req, res) {
+  const qnaData = req.body;
+  qnaHelper.updQNA(pgPool, qnaData, function(err, data){
+    if (err) {
+      console.log('Error updating data to DB:', err)
+      res.sendStatus(500).end();
+    } else {
+      res.sendStatus(200).end();
+    }
+  });
+})
+
 router.post('/sendDMail', function(req, res) {
   //if (app === undefined) app = require('../app');
   sendDMail.sendQuestion('MSPB Question.', req.body.question);

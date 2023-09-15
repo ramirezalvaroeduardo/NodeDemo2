@@ -22,12 +22,12 @@ block content
                 - var question = 'o ' + item.question + '?'
                   h2(class="accordion-header" id="heading" + item.uuid_key)
                     div(class="accordion-item accordionItemStyle")
-                      button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#coll" + item.uuid_key aria-expanded="true" aria-controls="coll" + item.uuid_key )= question
+                      button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#coll" + item.uuid_key aria-expanded="true" aria-controls="coll" + item.uuid_key id="que" + item.uuid_key)= item.question
                       i(class="fa-solid fa-pen-to-square fa-lg pencilStyle" data-bs-toggle="modal" data-bs-target="#updateModal" data-bs-uuidkey="" + item.uuid_key id="" + item.uuid_key )
                       i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-uuidkey="" + item.uuid_key id="" + item.uuid_key )
                   div(class="accordion-collapse collapse" id="coll" + item.uuid_key aria-labelledby="heading" + item.uuid_key data-bs-parent="#accordionQAFromDB")
                     div(class="accordion-body")
-                      h4= item.answer
+                      h4(id="ans" + item.uuid_key)= item.answer
     hr 
 
     // QnA Hardcoded section
@@ -106,8 +106,33 @@ block content
             button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Cancel
             button(type="button" class="btn btn-primary" data-bs-dismiss="modal" id="exeDeleteQuestion") Delete
 
+    // Section for Update Form Bootstrap Modal
+    div(class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true")
+      div(class="modal-dialog")
+        div(class="modal-content")
+          div(class="modal-header")
+            h5(class="modal-title" id="updateModalLabel") Update Question and Answer
+            button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+          div(class="modal-body")
+            form
+              div(class="mb-3")
+                label(for="qnaContext" class="col-form-label") Context:
+                textarea(class="form-control" id="qnaContext" placeholder='Write the Context' rows=1)
+              div(class="mb-3")
+                label(for="qnaUpdQuestion" class="col-form-label") Question:
+                textarea(class="form-control" id="qnaUpdQuestion" placeholder='Write the Question' rows=3)
+              div(class="mb-3")
+                label(for="qnaUpdAnswer" class="col-form-label") Answer:
+                textarea(class="form-control" id="qnaUpdAnswer" placeholder='Write the Answer' rows=3)
+          div(class="modal-footer")
+            button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Cancel
+            button(class="btn btn-primary" data-bs-dismiss="modal" onClick='updQuestion(qnaContext.value, qnaUpdQuestion.value, qnaUpdAnswer.value)') Submit
+
+
+
+
     // Section for Alert BootStrap Modal
-    div(class="modal fade" id="updateModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true")
+    div(class="modal fade" id="updateModalAlert" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true")
       div(class="modal-dialog")
         div(class="modal-content")
           div(class="modal-header")
