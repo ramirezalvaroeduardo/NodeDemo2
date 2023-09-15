@@ -22,7 +22,7 @@ block content
                 - var question = 'o ' + item.question + '?'
                   h2(class="accordion-header" id="heading" + item.uuid_key)
                     div(class="accordion-item accordionItemStyle")
-                      button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#coll" + item.uuid_key aria-expanded="true" aria-controls="coll" + item.uuid_key id="que" + item.uuid_key)= item.question
+                      button(class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#coll" + item.uuid_key aria-expanded="true" aria-controls="coll" + item.uuid_key id="que" + item.uuid_key)= question
                       i(class="fa-solid fa-pen-to-square fa-lg pencilStyle" data-bs-toggle="modal" data-bs-target="#updateModal" data-bs-uuidkey="" + item.uuid_key id="" + item.uuid_key )
                       i(class='fa-solid fa-circle-xmark fa-lg xMarkStyle' data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-uuidkey="" + item.uuid_key id="" + item.uuid_key )
                   div(class="accordion-collapse collapse" id="coll" + item.uuid_key aria-labelledby="heading" + item.uuid_key data-bs-parent="#accordionQAFromDB")

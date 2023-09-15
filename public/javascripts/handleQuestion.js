@@ -15,14 +15,14 @@ function addElement(parentElement, qnaData) {
 	
 	var newElement = '<h2 class="accordion-header" id="heading' + theID + '" style="margin:0; padding:0; border:0px">';
 	newElement += '<div class="accordion-item accordionItemStyle" style="justify-content: space-between; border:0px">'
-	newElement += '<button class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#coll' + theID + '" aria-expanded="true" aria-controls="coll' + theID + ' id="que"' + theID + '>';
+	newElement += '<button class="accordion-button bAccordProp" type="button" data-bs-toggle="collapse" data-bs-target="#coll' + theID + '" aria-expanded="true" aria-controls="coll' + theID + '" id="que' + theID + '">';
 	newElement += 'o ' + qnaData.question + '?</button>';
-	newElement += '<i class="fa-solid fa-pencil fa-lg pencilStyle" data-bs-toggle="modal" data-bs-target="#updateModal" data-bs-uuidkey="' + theID + '" id="' + theID + '"></i>';
+	newElement += '<i class="fa-solid fa-pen-to-square fa-lg pencilStyle" data-bs-toggle="modal" data-bs-target="#updateModal" data-bs-uuidkey="' + theID + '" id="' + theID + '"></i>';
 	newElement += '<i class="fa-solid fa-circle-xmark fa-lg xMarkStyle" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-uuidkey="' + theID + '" id="' + theID + '">';
 	newElement += '</i></div></h2>';
 	newElement += '<div class="accordion-collapse collapse" id="coll' + theID + '" aria-labelledby="heading' + theID + '" data-bs-parent="#accordionQAFromDB">';
 	newElement += '<div class="accordion-body">';
-	newElement += '<h4 id=>"que' + theID + '">' + qnaData.answer + '</h4>';
+	newElement += '<h4 id="ans' + theID + '">' + qnaData.answer + '</h4>';
 	newElement += '</div></div></div>';
 	parentElement.innerHTML += newElement;
 }
@@ -90,7 +90,7 @@ function delQuestion(dEvent) {
 }
 
 function updElement(theElement, value) {
-	theElement.innerText = value;
+	theElement.innerText = 'o ' + value + '?';
 }
 
 function updQuestion(context, question, answer) {
