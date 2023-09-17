@@ -84,10 +84,10 @@ block content
                 textarea(class="form-control" id="qnaContext" placeholder='Write the Context' rows=1)
               div(class="mb-3")
                 label(for="qnaQuestion" class="col-form-label") Question:
-                textarea(class="form-control" id="qnaQuestion" placeholder='Write the Question' rows=3)
+                textarea(class="form-control" id="qnaQuestion" placeholder='Write the Question' rows=3 required)
               div(class="mb-3")
                 label(for="qnaAnswer" class="col-form-label") Answer:
-                textarea(class="form-control" id="qnaAnswer" placeholder='Write the Answer' rows=3)
+                textarea(class="form-control" id="qnaAnswer" placeholder='Write the Answer' rows=3 required)
           div(class="modal-footer")
             button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Cancel
             button(class="btn btn-primary" data-bs-dismiss="modal" onClick='addQuestion(qnaContext.value, qnaQuestion.value, qnaAnswer.value)') Submit
@@ -120,10 +120,10 @@ block content
                 textarea(class="form-control" id="qnaContext" placeholder='Write the Context' rows=1)
               div(class="mb-3")
                 label(for="qnaUpdQuestion" class="col-form-label") Question:
-                textarea(class="form-control" id="qnaUpdQuestion" placeholder='Write the Question' rows=3)
+                textarea(class="form-control" id="qnaUpdQuestion" placeholder='Write the Question' rows=3 required)
               div(class="mb-3")
                 label(for="qnaUpdAnswer" class="col-form-label") Answer:
-                textarea(class="form-control" id="qnaUpdAnswer" placeholder='Write the Answer' rows=3)
+                textarea(class="form-control" id="qnaUpdAnswer" placeholder='Write the Answer' rows=3 required)
           div(class="modal-footer")
             button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Cancel
             button(class="btn btn-primary" data-bs-dismiss="modal" onClick='updQuestion(qnaContext.value, qnaUpdQuestion.value, qnaUpdAnswer.value)') Submit
