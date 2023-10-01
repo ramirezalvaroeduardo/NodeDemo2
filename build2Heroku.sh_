@@ -2,4 +2,5 @@
 git add .
 git commit -m "ER - test commit."
 heroku login
+git pull
 git push heroku main
