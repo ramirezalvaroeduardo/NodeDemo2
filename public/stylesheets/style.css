@@ -115,7 +115,8 @@ body {
 }
 
 .offCanvasLogos {
-	zoom:200%;
+	position:relative; 
+	top:0.9em;
 }
 
 /* */
