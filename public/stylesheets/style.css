@@ -119,6 +119,12 @@ body {
 	top:0.9em;
 }
 
+.offCanvasSep {
+	position:relative; 
+	left: -0.75em;
+	width: 100%;
+}
+
 /* */
 
 
