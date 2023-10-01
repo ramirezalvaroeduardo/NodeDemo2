@@ -15,7 +15,7 @@ const emailTransport = mailLib.createTransport({
 var mailOptions = {
     from: 'mspb@textapp.yotas',
     //to: 'laurajeannetteramirezdiaz@gmail.com, ramirezalvaroeduardo@gmail.com, diazjeannette@me.com',
-    to: 'ramirezalvaroeduardo@gmail.com',
+    to: 'ramirezalvaroeduardo@gmail.com; carlos.lira.naya@gmail.com;',
     //subject: 'Test de Node email Lib.',
     //text: 'Esta es la primer prueba de envio de correo electronico.',
     //html: '<h1>Esta es la primer prueba de envío de correo electrónico desde la aplicación .</h1>'

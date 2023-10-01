@@ -68,6 +68,11 @@ body {
 	font-weight: bold;
 }
 
+.offCanvasItems {
+	padding-top:0.125em; 
+	margin-left: 0.25em;
+}
+
 /* Canvas section */
 
 .offCanvasStyle {
@@ -92,10 +97,11 @@ body {
   margin: 0px 0px 0.25em 2em;
   padding: 0;
   font-size: 1em;
-  list-style-type: circle;
+  list-style-type: none;
 }
 
 .canvasMenuOption {
+	display: flex;
 	font-size: 0.75em;
   list-style-type: circle;
 	color: #E0EFFC;
@@ -362,7 +368,13 @@ hr {
 	margin-bottom: 0;
 }
 
+.loginBlockStyle {
+	display: block;
+}
 
+.loginFontStyle {
+	font-weight: bold;
+}
 /*
 #body {
 #  padding-left: 30px;
