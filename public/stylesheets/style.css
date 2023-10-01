@@ -107,10 +107,15 @@ body {
   list-style-type: circle;
 	color: #E0EFFC;
 	text-decoration:  none;
+	zoom:200%;
 }
 
 .offCanvasClose {
 	background-color: #E0EFFC;
+}
+
+.offCanvasLogos {
+	zoom:200%;
 }
 
 /* */
