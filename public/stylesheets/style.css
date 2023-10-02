@@ -77,7 +77,7 @@ body {
 }
 
 .canvasTitle {
-	font-size: 6.5em;
+	font-size: 6em;
 	color: #E0EFFC;
 	margin: 0.4em 0 0 0.4em;
 	font-weight: bold;
@@ -109,7 +109,7 @@ body {
 }
 
 .offCanvasLogos {
-	zoom:150%;
+	zoom:100%;
 }
 
 .offCanvasItems {
