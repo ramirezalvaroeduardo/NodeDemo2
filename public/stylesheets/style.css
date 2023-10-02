@@ -11,7 +11,7 @@ body {
 		zoom:  150%;
 	}
 	div.offCanvasStyle {
-		 zoom: 100%;
+		 zoom: 80%;
 	}
 	div.lineMenu {
 		display: block;
@@ -71,7 +71,7 @@ body {
 .offCanvasItems {
 	padding-top:0.125em; 
 	margin-left: 0.25em;
-	font-size: 1.6em;
+	font-size: 0.8em;
 }
 
 /* Canvas section */
@@ -79,7 +79,7 @@ body {
 .offCanvasStyle {
 	background: #003257;
 	color: #E0EFFC;
-	width: 90%;
+	width: 80%;
 }
 
 .canvasTitle {
