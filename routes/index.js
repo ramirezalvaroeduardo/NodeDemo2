@@ -36,6 +36,11 @@ router.get('/faqs', function(req, res) {
   });
 })
 
+router.get('/docs', function(req, res) {
+  //if (app === undefined) app = require('../app');
+  res.render('docs', '');
+})
+
 router.post('/addQuestion', function(req, res) {
   const qnaData = req.body;
   qnaHelper.addQNA(pgPool, qnaData, function(err, data){
