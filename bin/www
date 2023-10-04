@@ -99,3 +99,7 @@ pgPool = pgConn.openPGConn();
 app.set('pgPool', pgPool);
 console.log('Connected to PostGress DB.');
 
+slConn = pgConn.openSLConn();
+app.set('slConn', slConn);
+slConn.close();
+console.log('\n\nConnected to Sqlite3 DB.');
