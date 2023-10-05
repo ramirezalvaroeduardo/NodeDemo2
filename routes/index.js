@@ -27,7 +27,8 @@ router.get('/staff', function(req, res) {
 })
 
 router.get('/faqs', function(req, res) {
-  qnaHelper.getQNA(pgPool, function(err, data){
+  //qnaHelper.getQNA(pgPool, function(err, data){
+  qnaHelper.getQNASL(slConn, function(err, data){
     if (err) {
       console.log('Error grabbing data from DB:', err)
       data = [];

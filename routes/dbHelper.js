@@ -20,7 +20,7 @@ var openSLConn = function openSLConn() {
 	})
 	console.log('Connected to showFaqslite3: ', slDBConn);
 
-	var dSQL = 'SELECT * FROM freq_questions';
+	/*var dSQL = 'SELECT * FROM freq_questions';
 	slDBConn.all(dSQL, [], function(err, rows) {
 		if(err){
 			console.error( 'Error querying Sqlite3 DB - freq_questions table: ', err);
@@ -29,6 +29,7 @@ var openSLConn = function openSLConn() {
 			console.log('Sqlite freq_questions CNTR:', row);
 		});
 	});
+	*/
 	return slDBConn;
 }
 
