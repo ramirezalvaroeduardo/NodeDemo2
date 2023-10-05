@@ -13,7 +13,7 @@ var openPGConn = function openPGConn() {
 }
 
 var openSLConn = function openSLConn() {
-	const slDBConn = new slLibCon.Database('db/sqlite-tools-osx-x86-3430100/mspbtutorial', function(err) {
+	const slDBConn = new slLibCon.Database('db/mspbtutorial', function(err) {
 		if(err) {
 			console.error(err.message);
 		}

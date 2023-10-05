@@ -45,7 +45,7 @@ var getQNASL = async function getQNASL(slDBConn, cbFunction) {
 	const dSQL = 'SELECT * FROM freq_questions';
 	//slConn = chkSLConn(slDBConn);
 	try {
-		const slConn = new slLibCon.Database('db/sqlite-tools-osx-x86-3430100/mspbtutorial', function(err) {
+		const slConn = new slLibCon.Database('db/mspbtutorial', function(err) {
 			if(err) {
 				console.error(err.message);
 			}
