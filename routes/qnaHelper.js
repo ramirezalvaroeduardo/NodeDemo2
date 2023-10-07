@@ -41,6 +41,7 @@ var getQNA = async function getQNA(pgPool, cbFunction) {
 
 
 const slLibCon  = require('sqlite3').verbose();
+
 var getQNASL = async function getQNASL(slDBConn, cbFunction) {
 	const dSQL = 'SELECT * FROM freq_questions';
 	//slConn = chkSLConn(slDBConn);
@@ -66,9 +67,14 @@ var getQNASL = async function getQNASL(slDBConn, cbFunction) {
 
 var addQNA = async function addQNA(pgPool, qnaData, cbFunction) {
 	const addQnASql = "INSERT INTO freq_questions(question, answer, uuid_key) VALUES('" + qnaData.question + "', '" + qnaData.answer + "', '" + qnaData.uuid_key + "');"; 
-	pgConn = chkDBConn(pgPool);
+	//pgConn = chkDBConn(pgPool);
+	const slConn = new slLibCon.Database('db/mspbtutorial', function(err) {
+			if(err) {
+				console.error(err.message);
+			}
+		});
 	try {
-		var resData = await(pgConn.query(addQnASql));
+		var resData = await(slConn.run(addQnASql));
 		cbFunction(undefined, resData);
 	} catch (err) {
 		cbFunction(err, undefined);
@@ -77,9 +83,14 @@ var addQNA = async function addQNA(pgPool, qnaData, cbFunction) {
 
 var delQNA = async function delQNA(pgPool, qnaData, cbFunction) {
 	const delQnASql = "DELETE FROM freq_questions WHERE uuid_key = '" + qnaData.uuid_key + "';"; 
-	pgConn = chkDBConn(pgPool);
+	//pgConn = chkDBConn(pgPool);
+	const slConn = new slLibCon.Database('db/mspbtutorial', function(err) {
+		if(err) {
+			console.error(err.message);
+		}
+	});
 	try {
-		var resData = await(pgConn.query(delQnASql));
+		var resData = await(slConn.run(delQnASql));
 		cbFunction(undefined, resData);
 	} catch (err) {
 		cbFunction(err, undefined);
@@ -88,9 +99,14 @@ var delQNA = async function delQNA(pgPool, qnaData, cbFunction) {
 
 var updQNA = async function updQNA(pgPool, qnaData, cbFunction) {
 	const delQnASql = "UPDATE freq_questions SET question = '" + qnaData.question+ "', answer = '" + qnaData.answer + "' WHERE uuid_key = '" + qnaData.uuid_key + "';"; 
-	pgConn = chkDBConn(pgPool);
+	//pgConn = chkDBConn(pgPool);
+	const slConn = new slLibCon.Database('db/mspbtutorial', function(err) {
+		if(err) {
+			console.error(err.message);
+		}
+	});
 	try {
-		var resData = await(pgConn.query(delQnASql));
+		var resData = await(slConn.run(delQnASql));
 		cbFunction(undefined, resData);
 	} catch (err) {
 		cbFunction(err, undefined);
