@@ -1,6 +1,6 @@
 
 git add .
-git commit -m "ER - test commit."
+git commit -m "$1"
 heroku login
 git pull
 git push heroku main

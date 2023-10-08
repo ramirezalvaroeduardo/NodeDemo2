@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  div.commonStyle()
+
+  // Section to Login Modal
+    //div(class="modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true")
+  div(class="modal-dialog")
+    div(class= "modal-content")
+      div(class="modal-header")
+        img.headerImg(src="images/mspb_logo.jpeg" style="zoom: 75%; margin-right: 1.5em;" alt="MSPB")
+        h5(class="modal-title loginFontStyle" id="loginModalLabel") Login
+        button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+      div(class="modal-body")
+        form
+          div(class="mb-3 row loginBlockStyle")
+            label(for="userId" class="col-sm-2 col-form-label loginFontStyle") User
+            div(class="col-sm-10")
+              input(type="text" class="form-control" id="userId" placeholder="Enter User name" required)
+          div(class="mb-3 row loginBlockStyle")
+             label(for="inputPassword" class="col-sm-2 col-form-label loginFontStyle") Password
+             div(class="col-sm-10")
+               input(type="password" class="form-control" id="inPwd" placeholder="Enter Password" autocomplete="current-password" required)
+          div(class="modal-footer")
+            button(id="loginCancel" type="button" class="btn btn-secondary" data-bs-dismiss="modal" ) Cancel
+            button(id="loginSubmit" class="btn btn-primary" data-bs-dismiss="modal") Login
+
+
+  

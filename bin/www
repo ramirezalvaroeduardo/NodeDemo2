@@ -92,6 +92,12 @@ function onListening() {
 }
 
 /**
+ * Login boolean
+ */
+loggedIn = false;
+app.set('loggedIn', loggedIn);
+
+/**
  * Open connection to PostGress DB
  */
 

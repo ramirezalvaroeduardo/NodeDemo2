@@ -2,44 +2,89 @@ var express = require('express');
 var router = express.Router();
 var sendDMail = require('./mailHelper');
 var qnaHelper = require('./qnaHelper');
+var lgnHelper = require('./lgnHelper')
 
 //var app = undefined; 
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  //if (app === undefined) app = require('../app');
-  res.render('index', { title: 'MSPB' });
+  if(!loggedIn) {
+    res.render('login');
+  } else {
+    res.render('index', { title: 'MSPB' });
+  }
 });
 
+router.post('/login', function(req, res, next) {
+  if(!loggedIn) {
+    res.render('login');
+  } else {
+    res.render('index', { title: 'MSPB' });
+  }
+});
+
+
+router.post('/checkPwd', function(req, res) {
+    const lgnData = req.body;
+    lgnHelper.checkPwd(lgnData.userId, lgnData.inPwd, function(err1, res1){
+      if(err1) { console.log("Error...:", err1); return {err: err1};}
+      else {   console.log('Res.....:', res1.userId); loggedIn = true; res.render('index', { title: 'MSPB' });} 
+    });
+})
+
+
 router.get('/pvdr', function(req, res) {
-  //if (app === undefined) app = require('../app');
-  res.render('pvdr', '');
+  if(!loggedIn) {
+    res.render('login');
+  } else {
+    res.render('pvdr', '');
+  }
 })
 
 router.get('/upmr', function(req, res) {
-  //if (app === undefined) app = require('../app');
-  res.render('upmr', '');
+  if(!loggedIn) {
+    res.render('login');
+  } else {
+    res.render('upmr', '');
+  }
 })
 
 router.get('/staff', function(req, res) {
-  //if (app === undefined) app = require('../app');
-  res.render('staff', '');
+  if(!loggedIn) {
+    res.render('login');
+  } else {
+    res.render('staff', '');
+  }
 })
 
 router.get('/faqs', function(req, res) {
-  //qnaHelper.getQNA(pgPool, function(err, data){
-  qnaHelper.getQNASL(slConn, function(err, data){
-    if (err) {
-      console.log('Error grabbing data from DB:', err)
-      data = [];
-    }
-    res.render('faqs', {qnaArray: data});
-  });
+  if(!loggedIn) {
+    res.render('login');
+  } else {
+    qnaHelper.getQNASL(slConn, function(err, data){
+      if (err) {
+        console.log('Error grabbing data from DB:', err)
+        data = [];
+      }
+      res.render('faqs', {qnaArray: data});
+    });
+  }
 })
 
 router.get('/docs', function(req, res) {
-  //if (app === undefined) app = require('../app');
-  res.render('docs', '');
+  if(!loggedIn) {
+    res.render('login');
+  } else {
+    res.render('docs', '');
+  }
+})
+
+router.get('/tutorials', function(req, res) {
+  if(!loggedIn) {
+    res.render('login');
+  } else {
+    res.render('tutorials', '');
+  }
 })
 
 router.post('/addQuestion', function(req, res) {
@@ -81,11 +126,6 @@ router.post('/updQuestion', function(req, res) {
 router.post('/sendDMail', function(req, res) {
   //if (app === undefined) app = require('../app');
   sendDMail.sendQuestion('MSPB Question.', req.body.question);
-})
-
-router.get('/tutorials', function(req, res) {
-  //if (app === undefined) app = require('../app');
-  res.render('tutorials', '');
 })
 
 
