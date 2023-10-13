@@ -10,20 +10,28 @@ block content
 
     div(class="card cardStyle")
       div(class="card-header h3Style") MSPB-Docs
-      div(align="center")
+      //div(align="center")
         img.imgStyle(src="images/SoftUnderContr.jpeg" alt="MSPB" width="160" align="center")
       div(class="card-body")
         div(id="carouselExampleControls" class="carousel" data-bs-ride="carousel")
           div(class="carousel-inner")
-            div(class="carousel-item active")
-              img(src="images/mspb_logo.jpeg" height="120" style="display: block; margin-left: auto; margin-right: auto;")
-            div(class="carousel-item")
-              img(src="images/SoftUnderContr.jpeg" height="120" style="display: block; margin-left: auto; margin-right: auto;")
+            - var firstItem = true
+            each item in docArray
+              if firstItem
+                - firstItem = false
+                div(class="carousel-item active")
+                  img(src="files/VBC_Playbook_V11/" + item height="400" style="display: block; margin-left: auto; margin-right: auto;")
+              else
+                div(class="carousel-item")
+                  img(src="files/VBC_Playbook_V11/" + item height="400" style="display: block; margin-left: auto; margin-right: auto;")
           button(class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev")
             span(class="carousel-control-prev-icon" style="background-color:#777;" aria-hidden="false")
             span(class="visually-hidden") Previous
           button(class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
             span(class="carousel-control-next-icon" style="background-color:#777;" aria-hidden="false")
             span(class="visually-hidden") Next
-  div
-      embed(src="files/mspb_VCB_Toold_Book_V2.pdf" height="800" style="width: 80%; display: block; margin-left: auto; margin-right: auto;")
+  //div
+      embed(src="files/VBC_Playbook_V11.pdf" height="800" style="width: 80%; display: block; margin-left: auto; margin-right: auto;")
+  //div(class="carousel-item active")
+              img(src="files/VBC_Playbook_V11/" + docArray[0] width="500" style="display: block; margin-left: auto; margin-right: auto;")
+            

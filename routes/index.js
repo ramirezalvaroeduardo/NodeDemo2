@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 var sendDMail = require('./mailHelper');
 var qnaHelper = require('./qnaHelper');
-var lgnHelper = require('./lgnHelper')
+var lgnHelper = require('./lgnHelper');
+var docHelper = require('./docHelper');
 
 //var app = undefined; 
 
@@ -72,10 +73,21 @@ router.get('/faqs', function(req, res) {
 })
 
 router.get('/docs', function(req, res) {
+  const docDir = 'public/files/VBC_Playbook_V11';
   if(!loggedIn) {
     res.render('login');
   } else {
-    res.render('docs', '');
+    docHelper.getDirCont(docDir, function(err, files){
+      if(err) {
+        console.log('Error grabbing files:', err)
+        data = [];
+      } else {
+        for(var file in files){
+          console.log(files[file]);
+        }
+        res.render('docs', {docArray: files});
+      }
+    })
   }
 })
 
